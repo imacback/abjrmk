@@ -459,8 +459,6 @@ POST /jf/claimInfo
 -------- | ------ | -------- | -------------
 orderNo   | String | non-required | 订单号
 
-
-
 - 响应消息
 
 
@@ -476,25 +474,25 @@ orderNo   | String | non-required | 订单号
 查询我的资产
 
 ```
-POST /jf/assetInfo
+POST /jf/accountOverview
 ```
 
 - URL参数
 
 参数名      | 类型     | 规则       | 说明
 -------- | ------ | -------- | -------------
-
-
+userId   | Long | required | 账户ID
 
 - 响应消息
+0000 success代表成功，其余代表失败
 
-
-
+返回银行卡信息列表中的字段信息：
 
 参数名    | 说明
 -------- | ------
-
-
+capital   | 投资本金
+earnings   | 预期收益
+haveEarninged | 已赚取收益
 
 - 异常编码 9999
 
@@ -502,7 +500,7 @@ POST /jf/assetInfo
 查询用户订单
 
 ```
-POST /jf/assetInfo
+POST /jf/investmentInfo
 ```
 
 - URL参数
